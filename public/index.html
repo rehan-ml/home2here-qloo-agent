@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Home2Here turns the culture you love into a first-week belonging plan for a new city, powered by Qloo cultural intelligence.">
+  <meta name="theme-color" content="#f4efe5">
+  <title>Home2Here — Your taste already knows the way</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Home2Here home">
+      <span class="brand-mark" aria-hidden="true">H<span>2</span>H</span>
+      <span>Home2Here</span>
+    </a>
+    <div class="topbar-actions">
+      <span class="mode-pill" id="modePill"><span class="pulse"></span> Checking Qloo</span>
+      <a class="text-link" href="#how">How it works</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Cultural intelligence for starting over</p>
+        <h1>Your taste already<br><em>knows the way home.</em></h1>
+        <p class="hero-deck">Moving cities shouldn't mean losing the small things that make you feel like yourself. Home2Here translates what you love into places, sounds, stories, and rituals that belong in your new city.</p>
+        <div class="hero-proof">
+          <div><strong>3</strong><span>culture domains bridged</span></div>
+          <div><strong>1</strong><span>explainable first-week plan</span></div>
+          <div><strong>0</strong><span>generic “top ten” lists</span></div>
+        </div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="city-node city-home"><small>FROM</small><strong>Mumbai</strong></div>
+        <div class="city-node city-new"><small>TO</small><strong>London</strong></div>
+        <div class="taste-node taste-music">♪</div>
+        <div class="taste-node taste-story">▶</div>
+        <div class="taste-node taste-place">⌖</div>
+        <svg viewBox="0 0 420 420" role="presentation">
+          <path d="M108 268 C150 80 292 84 326 220" />
+          <path d="M98 280 C185 340 284 326 329 226" />
+        </svg>
+      </div>
+    </section>
+
+    <section class="builder-shell" aria-labelledby="builderTitle">
+      <div class="builder-intro">
+        <div>
+          <p class="eyebrow">Build your cultural bridge</p>
+          <h2 id="builderTitle">Tell us what feels like you.</h2>
+        </div>
+        <p>Use a judge-ready persona or make your own. No account and no personal profile required.</p>
+      </div>
+
+      <div class="persona-row" id="personaRow" aria-label="Sample personas">
+        <button type="button" class="persona active" data-persona="mumbai_london"><span>01</span>Mumbai → London</button>
+        <button type="button" class="persona" data-persona="delhi_newyork"><span>02</span>Delhi → New York</button>
+        <button type="button" class="persona" data-persona="bengaluru_berlin"><span>03</span>Bengaluru → Berlin</button>
+      </div>
+
+      <form id="bridgeForm" class="bridge-form">
+        <div class="form-card route-card">
+          <div class="card-label"><span>01</span> Your move</div>
+          <div class="route-inputs">
+            <label>Coming from<input id="origin" name="origin" autocomplete="address-level2" maxlength="60" value="Mumbai" required></label>
+            <span class="route-arrow" aria-hidden="true">→</span>
+            <label>Starting in<input id="destination" name="destination" autocomplete="address-level2" maxlength="60" value="London" required></label>
+          </div>
+        </div>
+
+        <div class="form-card taste-card">
+          <div class="card-label"><span>02</span> Your cultural anchors</div>
+          <p class="field-hint">Add artists, films, books, brands, restaurants, or places you genuinely love. Choose a category to avoid same-name mix-ups.</p>
+          <div class="chip-input" id="chipInput">
+            <div id="interestChips" class="chips"></div>
+            <input id="interestInput" aria-label="Add a cultural favorite" placeholder="Type a favorite and press Enter" maxlength="80">
+          </div>
+          <label class="anchor-type-label">New favorite category
+            <select id="interestType" aria-label="Category for next favorite">
+              <option value="">Auto-detect</option>
+              <option value="urn:entity:artist">Artist or band</option>
+              <option value="urn:entity:movie">Film</option>
+              <option value="urn:entity:place">Place or restaurant</option>
+              <option value="urn:entity:book">Book</option>
+              <option value="urn:entity:tv_show">TV show</option>
+              <option value="urn:entity:brand">Brand</option>
+            </select>
+          </label>
+          <p class="microcopy"><span id="interestCount">3</span>/8 anchors · minimum 2</p>
+        </div>
+
+        <div class="form-card tuning-card">
+          <div class="card-label"><span>03</span> Tune the landing</div>
+          <div class="tuning-grid">
+            <fieldset>
+              <legend>Budget comfort</legend>
+              <div class="segmented" id="budgetControl">
+                <button type="button" data-budget="1" aria-label="Low price level">1</button>
+                <button type="button" data-budget="2" class="selected" aria-label="Moderate price level">2</button>
+                <button type="button" data-budget="3" aria-label="Flexible price level">3</button>
+                <button type="button" data-budget="4" aria-label="Open price level">4</button>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Discovery pace</legend>
+              <div class="segmented pace" id="paceControl">
+                <button type="button" data-pace="comforting">Comfort</button>
+                <button type="button" data-pace="balanced" class="selected">Balanced</button>
+                <button type="button" data-pace="adventurous">Adventure</button>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <button class="primary-cta" id="buildButton" type="submit">
+          <span>Build my belonging plan</span><span aria-hidden="true">↗</span>
+        </button>
+        <p class="form-error" id="formError" role="alert"></p>
+      </form>
+    </section>
+
+    <section class="loading-panel hidden" id="loadingPanel" aria-live="polite">
+      <div class="loader-mark"><span></span><span></span><span></span></div>
+      <p class="eyebrow">Cultural Bridge Agent</p>
+      <h2 id="loadingTitle">Resolving your taste anchors…</h2>
+      <div class="loading-steps">
+        <span class="active">Resolve</span><span>Cross-domain</span><span>Constrain</span><span>Explain</span>
+      </div>
+    </section>
+
+    <section class="result-shell hidden" id="resultShell" aria-live="polite">
+      <div class="result-head">
+        <div>
+          <p class="eyebrow">Your bridge is ready</p>
+          <h2 id="resultHeadline"></h2>
+          <p id="resultSummary"></p>
+        </div>
+        <button class="secondary-button" id="startOver" type="button">Adjust profile</button>
+      </div>
+
+      <div class="notice hidden" id="demoNotice"></div>
+
+      <div class="taste-strip">
+        <span class="strip-label">Taste DNA</span>
+        <div id="fingerprint" class="fingerprint"></div>
+      </div>
+
+      <div class="stat-grid" id="statGrid"></div>
+
+      <div class="result-section">
+        <div class="section-heading">
+          <div><span>01</span><h3>Your cultural translations</h3></div>
+          <p>Qloo-ranked cultural leads, translated into a first-week plan.</p>
+        </div>
+        <div id="recommendationGroups" class="recommendation-groups"></div>
+      </div>
+
+      <div class="result-section week-section">
+        <div class="section-heading">
+          <div><span>02</span><h3>Your first week of belonging</h3></div>
+          <p>Recommendations become small actions—the agent plans a landing, not a list.</p>
+        </div>
+        <div id="weekPlan" class="week-plan"></div>
+      </div>
+
+      <div class="result-section evidence-section">
+        <div class="section-heading">
+          <div><span>03</span><h3>Why this needed Qloo</h3></div>
+          <p>Every step separates cultural signals, hard constraints, and presentation.</p>
+        </div>
+        <div class="evidence-grid">
+          <article class="agent-trace">
+            <h4>Agent trace</h4>
+            <div id="agentTrace"></div>
+          </article>
+          <article class="counterfactual">
+            <span class="mini-label">Source boundaries</span>
+            <h4>What Qloo supplies—and what Home2Here adds.</h4>
+            <div class="compare-row muted"><span>Qloo</span><p>Resolved cultural entities, cross-domain ranking, and explainability when available.</p></div>
+            <div class="compare-row"><span>Home2Here</span><p>Destination and eligible price constraints, feedback, pacing, and an actionable first-week sequence.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="how-title"><p class="eyebrow">Under the hood</p><h2>Agentic by design.<br>Human in outcome.</h2></div>
+      <div class="how-grid">
+        <article><span>01</span><h3>Resolve</h3><p>Exact or unambiguous names become Qloo entities; uncertain matches are left unresolved.</p></article>
+        <article><span>02</span><h3>Translate</h3><p>One taste fingerprint crosses places, music, and stories.</p></article>
+        <article><span>03</span><h3>Constrain</h3><p>Destination and eligible place prices shape retrieval; discovery pace shapes the week.</p></article>
+        <article><span>04</span><h3>Act</h3><p>The agent turns affinity into a doable first-week ritual.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">H<span>2</span>H</span><span>Home2Here</span></div>
+    <p>Built by Rehan Raza for the Qloo Agentic Hackathon · Cultural intelligence powered by Qloo.</p>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
