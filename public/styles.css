@@ -39,8 +39,9 @@ button { color: inherit; }
   display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line);
 }
 .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 700; letter-spacing: -.02em; }
-.brand-mark { width: 43px; height: 43px; border: 1px solid var(--ink); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 19px; }
-.brand-mark span { color: var(--coral-dark); font-size: .7em; vertical-align: top; }
+.brand-mark { flex: 0 0 43px; width: 43px; height: 43px; border: 1px solid var(--ink); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; gap: 1px; white-space: nowrap; font-family: var(--serif); font-size: 16px; font-weight: 400; line-height: 1; }
+.brand-mark > span { display: block; line-height: 1; }
+.brand-mark > span:nth-child(2) { color: var(--coral-dark); font-size: .68em; transform: translateY(2px); }
 .topbar-actions { display: flex; align-items: center; gap: 25px; }
 .text-link { color: var(--ink); font-size: 13px; font-weight: 600; }
 .mode-pill { border: 1px solid var(--line); border-radius: 999px; padding: 8px 13px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; display: flex; align-items: center; gap: 7px; }
