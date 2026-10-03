@@ -33,9 +33,20 @@ function escapeHtml(value) {
   })[character]);
 }
 
+function categoryLabel(type) {
+  return ({
+    "urn:entity:artist": "music",
+    "urn:entity:movie": "film",
+    "urn:entity:place": "place",
+    "urn:entity:book": "book",
+    "urn:entity:tv_show": "TV",
+    "urn:entity:brand": "brand",
+  })[type] ?? "auto";
+}
+
 function renderChips() {
   $("#interestChips").innerHTML = state.interests.map((interest, index) => `
-    <span class="chip">${escapeHtml(interest)}<button type="button" aria-label="Remove ${escapeHtml(interest)}" data-remove="${index}">×</button></span>
+    <span class="chip">${escapeHtml(interest)}<small>${categoryLabel(state.interestTypes[index])}</small><button type="button" aria-label="Remove ${escapeHtml(interest)}" data-remove="${index}">×</button></span>
   `).join("");
   $("#interestCount").textContent = state.interests.length;
   $$('[data-remove]').forEach((button) => button.addEventListener("click", () => {

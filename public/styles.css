@@ -89,6 +89,7 @@ input:focus { border-bottom-color: var(--coral-dark); }
 .field-hint, .microcopy { color: var(--ink-soft); font-size: 12px; margin: -10px 0 12px; }.microcopy { margin: 9px 0 0; text-align: right; }
 .chip-input { border: 1px solid var(--line); border-radius: 13px; min-height: 58px; padding: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; background: var(--cream); }
 .chips { display: contents; }.chip { display: inline-flex; gap: 9px; align-items: center; background: var(--ink); color: var(--cream); padding: 8px 11px; border-radius: 9px; font-size: 12px; }
+.chip small { color: var(--mint); font-size: 9px; text-transform: uppercase; letter-spacing: .07em; }
 .chip button { border: 0; background: transparent; color: var(--cream); cursor: pointer; opacity: .65; padding: 0; }
 .chip-input input { flex: 1; min-width: 210px; border: 0; padding: 6px; font-family: var(--sans); font-size: 13px; }
 .anchor-type-label { display: inline-flex; flex-direction: row; align-items: center; gap: 10px; margin-top: 12px; }
